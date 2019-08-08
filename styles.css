@@ -1,0 +1,84 @@
+
+html { 
+  background: url(main_portrait.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+header {
+
+    -webkit-animation: fadeIn 4s; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadeIn 4s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+.body#section-wipes {
+	height: 100%;
+	width: 100%;
+	background-image: none;
+}
+
+.body#section-slides #slideContainer .panel {
+	
+}
+.body#section-wipes .panel > b {
+	font-size: 40px;
+	
+	position: relative;
+	display: block;
+	height: 0;
+	overflow: visible;
+	top: 50%;
+	font-family: 'Roboto', sans-serif;
+font-weight:500;
+padding-left: 5%;
+}
+
+.black {
+	background-color: black;
+	color: white;
+}
+.white {
+	background-color: white;
+	color: black;
+}
+
+
+/* The style below is just for the appearance of the example div */
