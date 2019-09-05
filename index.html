@@ -31,7 +31,7 @@ body {
 }
 .title-text {
 padding-top: 10%;
-padding-bottom:30%;
+padding-bottom:70vh;
 color:white;
 width:100%;
 margin: 0 auto;
@@ -202,9 +202,10 @@ top: -20%!important;
 
 	// build tween
 	var tween = new TimelineMax()
-		.add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+		.add(TweenMax.to($word, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
 		
-		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF", ease:Linear.easeIn}), 0);			// change color during the whole thing
+		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF"}), 0);			// change color during the whole thing
+//		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF", ease:Linear.easeNone}), 0);			// change color during the whole thing
 
 	// build scene
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
