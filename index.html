@@ -28,6 +28,8 @@
       width: 100%;
       margin: 0px;
       padding: 0px;
+	  
+    
     }
 
     .title-text {
@@ -43,7 +45,7 @@
     #hi {
       margin: 0;
       padding: 0;
-      font-size: 40px;
+      font-size: 3em;
       font-family: 'Roboto', sans-serif;
       font-weight: 100;
       font-style: italic;
@@ -52,49 +54,56 @@
     #name {
       margin: 0;
       padding: 0;
-      font-size: 70px;
+      font-size: 4.5em;
       font-family: 'Roboto', sans-serif;
       font-weight: 900;
     }
 
     #intro {
       margin: 0;
-      padding-top: 1em;
-      font-size: 20px;
+      padding-top: 0.5em;
+      font-size: 1.2em;
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
     }
 
     div#text-wrapper {
-        width: max-content;
-        height:  max-content;
-        background: red;
-        float: left;
-        font-size: 3em;
-        position: relative;
-        display: block;
-        overflow: visible;
-        top: 50%;
+        
+		font-size: 3em;
         font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      padding-left: 5%;
+		font-weight:500;
+		
+        top: 50%;
+        vertical-align:middle;
+		text-align: center;
+		display: table-cell;
+		
+		word-wrap:normal;
+		
+		max-width: 5em;
+		min-width: 5em;
+		
     }
     div#content-wrapper {
-        margin-left: 15%;
-        height: 10px;
-        top: 50%;
-        background: green;
-        font-size: 40px;
+              
+		top: 50%;
+		vertical-align:middle;
+		display: table-cell;
+		width: 100%;
+		
 
-        position: relative;
-        display: block;
-
-        overflow: visible;
-
+        font-size: 3em;
         font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      padding-left: 5%;
+		font-weight:500;
+		padding-left: 5%;
     }
+	
+	
+	.formline{
+	display: table;
+	height: 100%;
+	table-layout: fixed;
+	}
 
   </style>
 
@@ -120,6 +129,8 @@
     <section class="panel white">
       <script>
         // init controller
+		
+		//ADD max-width: 100%; TO HTML,BODY CSS TO STOP HORIZONTAL SCROLL
         var controller = new ScrollMagic.Controller();
       </script>
       <style>
@@ -160,7 +171,7 @@
         <div id="trigger2"></div>
       </div>
       <div id="reveal">
-        <p>I am a sophomore at Rutgers University studying computer science. I am highly motivated and eager to learn yerrrrr</p>
+        <p>I am a sophomore at Rutgers University studying computer science. I am highly motivated and eager to learn about butttssss</p>
       </div>
 
       <script>
@@ -182,14 +193,17 @@
 
 
     <section class="panel black">
-      <div id="text-wrapper">My Projects</div>
-    <div id="content-wrapper"></div>
-
+	<li class="formline">
+		<div  id="text-wrapper" >Projects</div>
+        <div  id="content-wrapper" > Right </div>
+	</li>
     </section>
 
     <section class="panel white">
-      <div id="text-wrapper">My Photos and Music</div>
-    <div id="content-wrapper"></div>
+      <li class="formline">
+		<div  id="text-wrapper" >Art and Music</div>
+        <div  id="content-wrapper" > Right </div>
+	</li>
     </section>
 
 
@@ -248,7 +262,7 @@
           // build scene
           var scene = new ScrollMagic.Scene({
               triggerElement: "#trigger1",
-              duration: 200,
+              duration: 150,
               tweenChanges: true
             })
             .setTween(tween)
@@ -260,17 +274,20 @@
 
     <script>
     function setSize () {
-      var width= $("#text-wrapper").width()+parseInt($("#text-wrapper").css('padding-left'));
-      $("#content-wrapper").css('margin-left',width+'px');
-      console.log(width);
+      var offset= $("#text-wrapper").width()+parseInt($("#text-wrapper").css('padding-left'));
+	  width = parseInt(screen.availWidth)-parseInt(offset);
+	  //console.log(width);
+	  
+	  $("#content-wrapper").css('margin-left',offset+'px');
+
     }
 
     $( ".panel" ).each(function( index ) {
   console.log( index );
 });
 
-    $(setSize);
-    window.onresize = setSize();
+    //$(setSize);
+    //window.onresize = setSize;
     </script>
 
 
@@ -303,6 +320,8 @@
             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
         }
+		
+		
       });
     </script>
   </section>

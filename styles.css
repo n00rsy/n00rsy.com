@@ -53,6 +53,7 @@ header {
 	height: 100%;
 	width: 100%;
 	background-image: none;
+	display: table;
 }
 
 .body#section-slides #slideContainer .panel {
