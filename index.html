@@ -4,253 +4,308 @@
 <head>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300i,500,900&display=swap" rel="stylesheet">
-  
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
-<script type="text/javascript" src ="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
+  <script type="text/javascript" src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
 
 
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-<title>Noor Syed</title>
+  <title>Noor Syed</title>
 </head>
 
 <body>
 
 
-<style>
-html, 
-body {
-    height: 100%;
-	width:100%;
-	margin:0px;
-	padding:0px;
-}
-.title-text {
-padding-top: 10%;
-padding-bottom:70vh;
-color:white;
-width:100%;
-margin: 0 auto;
-text-align:center;
- }
- 
- 
-#hi{
-margin: 0;
-    padding: 0;
- font-size:40px;
-font-family: 'Roboto', sans-serif;
-font-weight:100;
-font-style:italic;
- }
- #name{
- margin: 0;
-    padding: 0;
- font-size:70px;
-font-family: 'Roboto', sans-serif;
-font-weight:900;
- }
- 
- #intro{
- margin: 0;
-    padding-top:1em;
- font-size:20px;
-font-family: 'Roboto', sans-serif;
-font-weight:500;
- }
-</style>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
 
-<section  class="title-text">
-<div id="title-wrapper">
-<header>
-  <p id="hi">Hi, I'm</p>
-  <p id = "name">Noor Syed</p>
-  <p id ="intro">developer | artist | cool guy</p>
-</header>
-</div>
-</section>
+    .title-text {
+      padding-top: 10%;
+      padding-bottom: 70vh;
+      color: white;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
 
 
-<section class="body" id="section-wipes">
-					<style >
-						.panel {
-							height: 100%;
-							width: 100%;
-							
-						}
+    #hi {
+      margin: 0;
+      padding: 0;
+      font-size: 40px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
 
-					</style>
-					<section class="panel white">						
-						<script>
-	// init controller
-	var controller = new ScrollMagic.Controller();
-</script>
-<style>
-	#reveal {
-		opacity: 0;
--webkit-transform: translate(0, 25%);
-    transform: translate(0, 25%);
-		-webkit-transition: all 2s ease-in-out;
-			 -moz-transition: all 2s ease-in-out;
-				-ms-transition: all 2s ease-in-out;
-				 -o-transition: all 2s ease-in-out;
-						transition: all 2s ease-in-out;
-						
-						position: relative;
-	display: block;
-	height: 0;
-	overflow: visible;
-	
-						
-						font-size:50px;
-						font-family: 'Roboto';
-						font-weight: 500;
-						padding-left:15%;
-						padding-right:10%;
-						
-	}
-	#reveal.visible {
-		opacity: 1;
-		-webkit-transform: none;
-			 -moz-transform: none;
-				-ms-transform: none;
-				 -o-transform: none;
-						transform: none;
-	}
+    #name {
+      margin: 0;
+      padding: 0;
+      font-size: 70px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+    }
 
-</style>
-<div id="trigger-wrapper" style="position: relative; padding-top:15%;">
-<div id="trigger2"></div>
-</div>
-<div id="reveal" >
-	<p>I like computer. I like bob ghe buildier Blah blah blah im so hungry s extra fadsjksdf jkcvx jkasf. !. sdfgj p.s. i like sushi</p>
-</div>
+    #intro {
+      margin: 0;
+      padding-top: 1em;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
 
-<script>
-		// build scene
-		new ScrollMagic.Scene({
-							triggerElement: "#trigger2",
-							triggerHook: 0.9,
-							offset: 50, // move trigger to center of element
-							reverse: false // only do once
-						})
-						.setClassToggle("#reveal", "visible") // add class toggle
-						.addIndicators() // add indicators (requires plugin)
-						.addTo(controller);
-</script>
-						
-					</section>
-					
-					
-					<section class="panel black">
-						<b>My Projects</b>
+    div#text-wrapper {
+        width: max-content;
+        height:  max-content;
+        background: red;
+        float: left;
+        font-size: 3em;
+        position: relative;
+        display: block;
+        overflow: visible;
+        top: 50%;
+        font-family: 'Roboto', sans-serif;
+      font-weight:500;
+      padding-left: 5%;
+    }
+    div#content-wrapper {
+        margin-left: 15%;
+        height: 10px;
+        top: 50%;
+        background: green;
+        font-size: 40px;
 
-					</section>
-					
-					
-					<section class="panel white">
-						<b>Photos/ Music</b>
-					</section>
-					
-					
-					<section class="panel black">
-						<b style = "text-align:center; top:10%;">Contact Me</b>
-						
+        position: relative;
+        display: block;
 
-<div id="signature-wrapper">
-<div id="trigger1" ></div>
-<style>
+        overflow: visible;
+
+        font-family: 'Roboto', sans-serif;
+      font-weight:500;
+      padding-left: 5%;
+    }
+
+  </style>
+
+  <section class="title-text">
+    <div id="title-wrapper">
+      <header>
+        <p id="hi">Hi, I'm</p>
+        <p id="name">Noor Syed</p>
+        <p id="intro">developer | artist | student</p>
+      </header>
+    </div>
+  </section>
 
 
-svg{
-width: 100%!important;
+  <section class="body" id="section-wipes">
+    <style>
+      .panel {
+        height: 100%;
+        width: 100%;
 
-height: 60%!important;
+      }
+    </style>
+    <section class="panel white">
+      <script>
+        // init controller
+        var controller = new ScrollMagic.Controller();
+      </script>
+      <style>
+        #reveal {
+          opacity: 0;
+          -webkit-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+          -webkit-transition: all 2s ease-in-out;
+          -moz-transition: all 2s ease-in-out;
+          -ms-transition: all 2s ease-in-out;
+          -o-transition: all 2s ease-in-out;
+          transition: all 2s ease-in-out;
 
-left: 0!important;
+          position: relative;
+          display: block;
+          height: 0;
+          overflow: visible;
 
-top: -20%!important;
-}
-</style>
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="300"
-   viewBox="0 0 350 350" style="position: absolute;
+          font-size: 50px;
+          font-family: 'Roboto';
+          font-weight: 500;
+          padding-left: 15%;
+          padding-right: 10%;
+
+        }
+
+        #reveal.visible {
+          opacity: 1;
+          -webkit-transform: none;
+          -moz-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
+          transform: none;
+        }
+      </style>
+      <div id="trigger-wrapper" style="position: relative; padding-top:15%;">
+        <div id="trigger2"></div>
+      </div>
+      <div id="reveal">
+        <p>I am a sophomore at Rutgers University studying computer science. I am highly motivated and eager to learn yerrrrr</p>
+      </div>
+
+      <script>
+        // build scene
+        new ScrollMagic.Scene({
+            triggerElement: "#trigger2",
+            triggerHook: 0.9,
+            offset: 50, // move trigger to center of element
+            reverse: false // only do once
+          })
+          .setClassToggle("#reveal", "visible") // add class toggle
+          .addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
+      </script>
+
+    </section>
+
+
+
+
+    <section class="panel black">
+      <div id="text-wrapper">My Projects</div>
+    <div id="content-wrapper"></div>
+
+    </section>
+
+    <section class="panel white">
+      <div id="text-wrapper">My Photos and Music</div>
+    <div id="content-wrapper"></div>
+    </section>
+
+
+    <section class="panel black">
+      <b style="text-align:center; top:10%;">Contact Me</b>
+      <div id="signature-wrapper">
+        <div id="trigger1"></div>
+        <style>
+          svg {
+            width: 100% !important;
+
+            height: 60% !important;
+
+            left: 0 !important;
+
+            top: -20% !important;
+          }
+        </style>
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="300" viewBox="0 0 350 350" style="position: absolute;
   top: 80px;">
-	<path id="word" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 500px; stroke-dashoffset: 0px;" fill="none" stroke="#000000" stroke-width="1" d="M120.99 274.46L129.9 263.56L141.78 249.7L150.69 241.78L162.57 238.81L173.47 238.81L178.42 251.68L178.42 263.56L172.48 274.46L182.38 263.56L188.32 272.48L184.36 282.38L192.28 273.47L203.17 273.47L212.08 264.55L220.99 259.6L220.99 247.72L232.87 246.73L233.86 262.57L225.94 274.46L216.04 287.33L208.12 300.2L202.18 309.11L207.13 289.31L218.02 278.42L231.88 268.51L244.75 263.56L257.62 260.59L255.64 271.49L247.72 283.37L261.58 275.45L266.53 264.55L270.5 251.68L273.47 241.78L277.43 230.89L275.45 251.68L271.49 266.53L267.52 280.4"></path>
-</svg>
-<script>
-	function pathPrepare ($el) {
-		var lineLength = $el[0].getTotalLength();
-		$el.css("stroke-dasharray", lineLength);
-		$el.css("stroke-dashoffset", lineLength);
-	}
+          <path id="word" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 500px; stroke-dashoffset: 0px;" fill="none" stroke="#000000" stroke-width="1"
+            d="M120.99 274.46L129.9 263.56L141.78 249.7L150.69 241.78L162.57 238.81L173.47 238.81L178.42 251.68L178.42 263.56L172.48 274.46L182.38 263.56L188.32 272.48L184.36 282.38L192.28 273.47L203.17 273.47L212.08 264.55L220.99 259.6L220.99 247.72L232.87 246.73L233.86 262.57L225.94 274.46L216.04 287.33L208.12 300.2L202.18 309.11L207.13 289.31L218.02 278.42L231.88 268.51L244.75 263.56L257.62 260.59L255.64 271.49L247.72 283.37L261.58 275.45L266.53 264.55L270.5 251.68L273.47 241.78L277.43 230.89L275.45 251.68L271.49 266.53L267.52 280.4">
+          </path>
+        </svg>
+        <script>
+          function pathPrepare($el) {
+            var lineLength = $el[0].getTotalLength();
+            $el.css("stroke-dasharray", lineLength);
+            $el.css("stroke-dashoffset", lineLength);
+          }
 
-	var $word = $("path#word");
-	
-	
+          var $word = $("path#word");
 
-	// prepare SVG
-	pathPrepare($word);
-	
 
-	// init controller
-	var controller = new ScrollMagic.Controller();
 
-	// build tween
-	var tween = new TimelineMax()
-		.add(TweenMax.to($word, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-		
-		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF"}), 0);			// change color during the whole thing
-//		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF", ease:Linear.easeNone}), 0);			// change color during the whole thing
+          // prepare SVG
+          pathPrepare($word);
 
-	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
-					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
-</script>
-</div>
-					</section>
-					
-					
-					
-					
-					
-<script>
-	$(function () { // wait for document ready
-	
-	
-		// init
-		var controller = new ScrollMagic.Controller({
-			globalSceneOptions: {
-				triggerHook: 'onLeave',
-				duration: "200%" // this works just fine with duration 0 as well
-				// However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-				// Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
-			}
-		});
 
-		// get all slides
-		var slides = document.querySelectorAll("section.panel");
+          // init controller
+          var controller = new ScrollMagic.Controller();
 
-		// create scene for every slide
-		for (var i=0; i<slides.length; i++) {
-			new ScrollMagic.Scene({
-					triggerElement: slides[i]
-				})
-				.setPin(slides[i], {pushFollowers: false})
-				.addIndicators() // add indicators (requires plugin)
-				.addTo(controller);
-		}
-	});
-	
-	
-</script>
-</section>
+          // build tween
+          var tween = new TimelineMax()
+            .add(TweenMax.to($word, 1, {
+              strokeDashoffset: 0,
+              ease: Linear.easeNone
+            })) // draw word for 0.9
+
+            .add(TweenMax.to("path", 0.5, {
+              stroke: "#FFFFFF"
+            }), 0); // change color during the whole thing
+          //		.add(TweenMax.to("path", 0.5, {stroke: "#FFFFFF", ease:Linear.easeNone}), 0);			// change color during the whole thing
+
+          // build scene
+          var scene = new ScrollMagic.Scene({
+              triggerElement: "#trigger1",
+              duration: 200,
+              tweenChanges: true
+            })
+            .setTween(tween)
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+        </script>
+      </div>
+    </section>
+
+    <script>
+    function setSize () {
+      var width= $("#text-wrapper").width()+parseInt($("#text-wrapper").css('padding-left'));
+      $("#content-wrapper").css('margin-left',width+'px');
+      console.log(width);
+    }
+
+    $( ".panel" ).each(function( index ) {
+  console.log( index );
+});
+
+    $(setSize);
+    window.onresize = setSize();
+    </script>
+
+
+
+    <script>
+      $(function() { // wait for document ready
+
+
+        // init
+        var controller = new ScrollMagic.Controller({
+          globalSceneOptions: {
+            triggerHook: 'onLeave',
+            duration: "200%" // this works just fine with duration 0 as well
+            // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+            // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+          }
+        });
+
+        // get all slides
+        var slides = document.querySelectorAll("section.panel");
+
+        // create scene for every slide
+        for (var i = 0; i < slides.length; i++) {
+          new ScrollMagic.Scene({
+              triggerElement: slides[i]
+            })
+            .setPin(slides[i], {
+              pushFollowers: false
+            })
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+        }
+      });
+    </script>
+  </section>
 
 </body>
 
