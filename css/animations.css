@@ -1,0 +1,80 @@
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+        #reveal {
+          opacity: 0;
+          -webkit-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+          -webkit-transition: all 2s ease-in-out;
+          -moz-transition: all 2s ease-in-out;
+          -ms-transition: all 2s ease-in-out;
+          -o-transition: all 2s ease-in-out;
+          transition: all 2s ease-in-out;
+
+          position: relative;
+          display: block;
+          height: 0;
+          overflow: visible;
+
+
+          font-size: 50px;
+          font-family: 'Roboto';
+          font-weight: 500;
+          padding-left: 15%;
+          padding-right: 10%;
+
+        }
+
+        #reveal.visible {
+          opacity: 1;
+          -webkit-transform: none;
+          -moz-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
+          transform: none;
+        }

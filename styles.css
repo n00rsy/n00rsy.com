@@ -1,6 +1,6 @@
 
 html { 
-  background: url(main_portrait.jpg) no-repeat center center fixed; 
+  background: url(Images/main_portrait.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,42 +11,102 @@ html {
 
 header {
 
-    -webkit-animation: fadeIn 4s; /* Safari, Chrome and Opera > 12.1 */
-            animation: fadeIn 4s;
+    -webkit-animation: fadeInUp 4s; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadeInUp 4s;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 25%, 0);
-    transform: translate3d(0, 25%, 0);
-  }
 
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+#scrollDown{
+	    -webkit-animation: fadeIn 4s forwards; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadeIn 4s forwards;
+			animation-delay: 3s;
+
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 25%, 0);
-    transform: translate3d(0, 25%, 0);
-  }
 
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
+.title-text {
+      padding-top: 10%;
+      padding-bottom: 70vh;
+      color: white;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
+
+    #hi {
+      margin: 0;
+      padding: 0;
+      font-size: 3em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+
+    #name {
+      margin: 0;
+      padding: 0;
+      font-size: 4.5em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+    }
+
+    #intro {
+      margin: 0;
+      padding-top: 0.5em;
+      font-size: 1.2em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+	
+	#scrollDown{
+	width:4em;
+	position: absolute;
+        bottom: 3em;
+		margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+opacity:0;
+	}
+
+    div#text-wrapper {
+        
+		font-size: 3em;
+        font-family: 'Roboto', sans-serif;
+		font-weight:500;
+		
+        top: 50%;
+        vertical-align:middle;
+		text-align: center;
+		display: table-cell;
+		
+		word-wrap:normal;
+		
+		max-width: 5em;
+		min-width: 5em;
+		
+    }
+    div#content-wrapper {
+              
+		top: 50%;
+		vertical-align:middle;
+		display: table-cell;
+		width: 100%;
+		
+
+        font-size: 3em;
+        font-family: 'Roboto', sans-serif;
+		font-weight:500;
+		padding-left: 5%;
+    }
+	
+	
+	.formline{
+	display: table;
+	height: 100%;
+	table-layout: fixed;
+	}
 
 
 .body#section-wipes {

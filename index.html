@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300i,500,900&display=swap" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -12,6 +13,8 @@
   <script type="text/javascript" src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
 
 
+  
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
@@ -20,7 +23,6 @@
 
 <body>
 
-
   <style>
     html,
     body {
@@ -28,83 +30,7 @@
       width: 100%;
       margin: 0px;
       padding: 0px;
-	  
-    
     }
-
-    .title-text {
-      padding-top: 10%;
-      padding-bottom: 70vh;
-      color: white;
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-
-    #hi {
-      margin: 0;
-      padding: 0;
-      font-size: 3em;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 100;
-      font-style: italic;
-    }
-
-    #name {
-      margin: 0;
-      padding: 0;
-      font-size: 4.5em;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-    }
-
-    #intro {
-      margin: 0;
-      padding-top: 0.5em;
-      font-size: 1.2em;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-    }
-
-    div#text-wrapper {
-        
-		font-size: 3em;
-        font-family: 'Roboto', sans-serif;
-		font-weight:500;
-		
-        top: 50%;
-        vertical-align:middle;
-		text-align: center;
-		display: table-cell;
-		
-		word-wrap:normal;
-		
-		max-width: 5em;
-		min-width: 5em;
-		
-    }
-    div#content-wrapper {
-              
-		top: 50%;
-		vertical-align:middle;
-		display: table-cell;
-		width: 100%;
-		
-
-        font-size: 3em;
-        font-family: 'Roboto', sans-serif;
-		font-weight:500;
-		padding-left: 5%;
-    }
-	
-	
-	.formline{
-	display: table;
-	height: 100%;
-	table-layout: fixed;
-	}
-
   </style>
 
   <section class="title-text">
@@ -115,6 +41,8 @@
         <p id="intro">developer | artist | student</p>
       </header>
     </div>
+	
+	<img src = "Images/scrollDown.png" id="scrollDown"></img>
   </section>
 
 
@@ -127,55 +55,17 @@
       }
     </style>
     <section class="panel white">
-      <script>
-        // init controller
-		
-		//ADD max-width: 100%; TO HTML,BODY CSS TO STOP HORIZONTAL SCROLL
-        var controller = new ScrollMagic.Controller();
-      </script>
-      <style>
-        #reveal {
-          opacity: 0;
-          -webkit-transform: translate(0, 25%);
-          transform: translate(0, 25%);
-          -webkit-transition: all 2s ease-in-out;
-          -moz-transition: all 2s ease-in-out;
-          -ms-transition: all 2s ease-in-out;
-          -o-transition: all 2s ease-in-out;
-          transition: all 2s ease-in-out;
-
-          position: relative;
-          display: block;
-          height: 0;
-          overflow: visible;
-
-
-          font-size: 50px;
-          font-family: 'Roboto';
-          font-weight: 500;
-          padding-left: 15%;
-          padding-right: 10%;
-
-        }
-
-        #reveal.visible {
-          opacity: 1;
-          -webkit-transform: none;
-          -moz-transform: none;
-          -ms-transform: none;
-          -o-transform: none;
-          transform: none;
-        }
-      </style>
       <div id="trigger-wrapper" style="position: relative; padding-top:15%;">
         <div id="trigger2"></div>
       </div>
       <div id="reveal">
-        <p>I am a sophomore at Rutgers University studying computer science. I am highly motivated and eager to learn about butttssss</p>
+        <p>I am a sophomore at Rutgers University studying computer science. I am highly motivated and eager to learn about and play with new technologies.</p>
       </div>
 
       <script>
         // build scene
+		//ADD max-width: 100%; TO HTML,BODY CSS TO STOP HORIZONTAL SCROLL
+		var controller = new ScrollMagic.Controller();
         new ScrollMagic.Scene({
             triggerElement: "#trigger2",
             triggerHook: 0.9,
@@ -186,11 +76,7 @@
           .addIndicators() // add indicators (requires plugin)
           .addTo(controller);
       </script>
-
     </section>
-
-
-
 
     <section class="panel black">
 	<li class="formline">
@@ -202,10 +88,11 @@
     <section class="panel white">
       <li class="formline">
 		<div  id="text-wrapper" >Art and Music</div>
-        <div  id="content-wrapper" > Right </div>
+        <div  id="content-wrapper" >
+		
+		</div>
 	</li>
     </section>
-
 
     <section class="panel black">
       <b style="text-align:center; top:10%;">Contact Me</b>
@@ -273,26 +160,6 @@
     </section>
 
     <script>
-    function setSize () {
-      var offset= $("#text-wrapper").width()+parseInt($("#text-wrapper").css('padding-left'));
-	  width = parseInt(screen.availWidth)-parseInt(offset);
-	  //console.log(width);
-	  
-	  $("#content-wrapper").css('margin-left',offset+'px');
-
-    }
-
-    $( ".panel" ).each(function( index ) {
-  console.log( index );
-});
-
-    //$(setSize);
-    //window.onresize = setSize;
-    </script>
-
-
-
-    <script>
       $(function() { // wait for document ready
 
 
@@ -327,5 +194,4 @@
   </section>
 
 </body>
-
 </html>
