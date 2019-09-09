@@ -9,21 +9,6 @@ html {
 
 
 
-header {
-
-    -webkit-animation: fadeInUp 4s; /* Safari, Chrome and Opera > 12.1 */
-            animation: fadeInUp 4s;
-}
-
-
-#scrollDown{
-	    -webkit-animation: fadeIn 4s forwards; /* Safari, Chrome and Opera > 12.1 */
-            animation: fadeIn 4s forwards;
-			animation-delay: 3s;
-
-}
-
-
 .title-text {
       padding-top: 10%;
       padding-bottom: 70vh;
@@ -59,8 +44,8 @@ header {
       font-weight: 500;
     }
 	
-	#scrollDown{
-	width:4em;
+	.scrollDown{
+			width:4em;
 	position: absolute;
         bottom: 3em;
 		margin-left: auto;
@@ -68,6 +53,19 @@ margin-right: auto;
 left: 0;
 right: 0;
 opacity:0;
+	}
+	
+		.scrollDownInvisible{
+			width:4em;
+	position: absolute;
+        bottom: 3em;
+		margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+opacity:0;
+-webkit-transition-duration: 3s;
+transition-duration: 3s;
 	}
 
     div#text-wrapper {
@@ -142,4 +140,3 @@ padding-left: 5%;
 }
 
 
-/* The style below is just for the appearance of the example div */

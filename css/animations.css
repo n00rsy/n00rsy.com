@@ -1,3 +1,20 @@
+
+
+header {
+
+    -webkit-animation: fadeInUp 4s; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadeInUp 4s;
+}
+
+
+.scrollDown{
+	    -webkit-animation: fadeIn 4s forwards; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadeIn 4s forwards;
+			animation-delay: 3s;
+}
+
+
+
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -45,6 +62,9 @@
     opacity: 1;
   }
 }
+
+
+
 
         #reveal {
           opacity: 0;
